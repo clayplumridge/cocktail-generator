@@ -1,4 +1,7 @@
-export interface Attributes {}
+export interface Attributes {
+    acidity?: number;
+    sweetness?: number;
+}
 
 export interface Cocktail {
     attributes: Attributes;
