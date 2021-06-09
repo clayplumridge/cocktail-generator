@@ -5,7 +5,7 @@ export interface Attributes {
 
 export interface Cocktail {
     attributes: Attributes;
-    ingredients: Ingredient[];
+    ingredients: Measure[];
 }
 
 export interface Measure {
@@ -15,16 +15,22 @@ export interface Measure {
 
 export const enum IngredientType {
     BaseSpirit = "BaseSpirit",
-    Sour = "Sour",
-    Sweet = "Sweet",
-    Modifier = "Modifier",
     Bitter = "Bitter",
-    Garnish = "Garnish"
+    Garnish = "Garnish",
+    Modifier = "Modifier",
+    Sour = "Sour",
+    Sweet = "Sweet"
+}
+
+export const enum IngredientUnit {
+    Ounce = "oz",
+    Quantity = "quantity"
 }
 
 export interface Ingredient {
     modifiers: Attributes;
     name: string;
+    id: string;
     type: IngredientType;
     unit: string;
 }

@@ -1,5 +1,17 @@
-import { Ingredient } from "../spec";
+import { Ingredient, IngredientType, IngredientUnit } from "../spec";
 
-const allIngredients: Ingredient[] = [];
+export const enum IngredientId {
+    Gin = "gin",
+    Rum = "rum",
+    Vodka = "vodka"
+}
 
-export default allIngredients;
+export const ingredients: Ingredient[] = [
+    {
+        id: IngredientId.Rum,
+        modifiers: {},
+        name: "Rum",
+        type: IngredientType.BaseSpirit,
+        unit: IngredientUnit.Ounce
+    }
+];

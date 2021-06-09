@@ -7,7 +7,7 @@
     "plugins": [
         "@typescript-eslint",
         "unused-imports",
-        "react",
+        "typescript-sort-keys",
         "sort-keys-fix",
         "import"
     ],
@@ -18,28 +18,16 @@
         // Double quotes for strings (has autofix)
         "quotes": "off",
         "@typescript-eslint/quotes": ["error", "double"],
-        // No using relative paths for imports from parent directories
-        // No autofix; trying to find one that works
-        "no-restricted-imports": [
-            "error",
-            {
-                "patterns": [
-                    "../*",
-                    "@/render/components/*",
-                    "@/render/database/schema/*"
-                ]
-            }
-        ],
         "no-duplicate-imports": "error",
         // No useless imports (has autofix)
         "unused-imports/no-unused-imports": "error",
-        // Sorts JSX props (has autofix)
-        "react/jsx-sort-props": [
-            "error",
-            { "ignoreCase": true, "shorthandFirst": true }
-        ],
         // Forces objects to have alphabetical keys (has autofix)
         "sort-keys-fix/sort-keys-fix": "error",
+        "typescript-sort-keys/string-enum": [
+            "error",
+            "asc",
+            { "caseSensitive": true }
+        ],
         // Sort individual imports within a block eg { Menu, Observer } (has autofix)
         "sort-imports": [
             "error",

@@ -9,6 +9,7 @@ function mergeAttributes(first: Attributes, second: Attributes): Attributes {
         ...Object.keys(first),
         ...Object.keys(second)
     ]) as Set<keyof Attributes>;
+
     const result: Attributes = {};
 
     for (const key of keys) {
